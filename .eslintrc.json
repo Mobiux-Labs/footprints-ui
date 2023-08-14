@@ -1,0 +1,86 @@
+{
+  "env": {
+    "browser": true,
+    "es2023": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@next/next/recommended",
+    "next/core-web-vitals",
+    "prettier"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2023,
+    "sourceType": "module"
+  },
+  "plugins": ["react", "unused-imports"],
+  "rules": {
+    "@next/next/no-img-element": "error",
+    "no-undef": 0,
+    "react/jsx-uses-react": "off",
+    "react/react-in-jsx-scope": "off",
+    "no-console": [
+      "error",
+      {
+        "allow": ["warn"]
+      }
+    ],
+    "quote-props": ["error", "as-needed"],
+    "no-multiple-empty-lines": [
+      "error",
+      {
+        "max": 2,
+        "maxEOF": 1,
+        "maxBOF": 1
+      }
+    ],
+    "linebreak-style": ["error", "unix"],
+    "unused-imports/no-unused-imports": "error",
+    // Enforce consistent indentation (2 spaces)
+    "indent": ["error", 2],
+
+    // Enforce using single quotes for strings
+    "quotes": ["error", "single"],
+
+    // Require semicolons at the end of statements
+    "semi": ["error", "always"],
+
+    // Enforce consistent spacing around keywords and functions
+    "keyword-spacing": "error",
+
+    // Enforce consistent spacing inside braces
+    "block-spacing": "error",
+
+    // Enforce consistent spacing before and after arrow functions' arrow
+    "arrow-spacing": "error",
+
+    // Enforce consistent spacing in function definitions and calls
+    "func-call-spacing": "error",
+
+    // Enforce consistent spacing before and after parentheses in JSX attributes
+    "react/jsx-props-no-multi-spaces": "error",
+
+    // Enforce consistent spacing after the // or /* in a comment
+    "spaced-comment": ["error", "always"],
+
+    // Require default case in switch statements
+    "default-case": "error",
+
+    // Enforce using === and !== instead of == and !=
+    "eqeqeq": "error",
+
+    // Enforce placing curly braces on the same line as the control statement in if blocks
+    "brace-style": ["error", "1tbs", { "allowSingleLine": true }],
+
+    // Enforce using camelCase for variable and function names
+    "camelcase": "error",
+
+    // Enforce using React's prop type checking
+    "react/prop-types": "error",
+
+    // Enforce hooks rules (dependency and order)
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
+  }
+}
