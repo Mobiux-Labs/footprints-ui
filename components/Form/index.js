@@ -48,7 +48,7 @@ Form.propTypes = {
   parentClassName: PropTypes.string,
   onSubmitHandler: PropTypes.func,
   formProps: PropTypes.object,
-  extraProps: PropTypes.object
+  props: PropTypes.object
 };
 
 Form.defaultProps = {
@@ -56,6 +56,6 @@ Form.defaultProps = {
   parentClassName: '',
   onSubmitHandler: () => {},
   formProps: {},
-  extraProps: {}
+  props: {}
 };
 export default Form;
