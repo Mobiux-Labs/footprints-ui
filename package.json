@@ -1,6 +1,6 @@
 {
   "name": "@mobiuxlabs/footprints-ui",
-  "version": "0.0.0-1",
+  "version": "0.0.0-2",
   "description": "Package includes components for admin console",
   "main": "index.js",
   "author": "Mobiux Labs",
