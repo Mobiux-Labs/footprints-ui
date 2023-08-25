@@ -1,7 +1,17 @@
 {
-  "name": "footprints-ui",
-  "version": "0.1.0",
-  "private": true,
+  "name": "@mobiuxlabs/footprints-ui",
+  "version": "0.0.0",
+  "description": "Package includes components for admin console",
+  "main": "index.js",
+  "author": "Mobiux Labs",
+  "license": "ISC",
+  "keywords": [
+    "footprints",
+    "mobiux",
+    "npm",
+    "node"
+  ],
+  "private": false,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -9,29 +19,42 @@
     "lint": "next lint",
     "lint-fix": "next lint --fix",
     "format:all": "prettier --write .",
-    "commit": "git-cz"
-  },
-  "config": {
-    "commitizen": {
-      "path": "git-cz"
-    }
+    "commit": "git-cz",
+    "prepare": "husky install"
   },
   "dependencies": {
     "autoprefixer": "10.4.15",
     "eslint": "8.47.0",
     "eslint-config-next": "13.4.13",
+    "named-urls": "^2.0.1",
     "next": "13.4.13",
     "postcss": "8.4.27",
+    "prop-types": "^15.8.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-icons": "^4.10.1",
     "tailwindcss": "3.3.3"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.7.1",
     "commitizen": "^4.3.0",
     "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-import": "^2.28.1",
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-unused-imports": "^3.0.0",
+    "git-cz": "^4.9.0",
     "husky": "^8.0.3",
     "prettier": "^3.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Mobiux-Labs/footprints-ui.git"
+  },
+  "config": {
+    "commitizen": {
+      "path": "git-cz"
+    }
   },
   "lint-staged": {
     "*.{js,jsx}": [

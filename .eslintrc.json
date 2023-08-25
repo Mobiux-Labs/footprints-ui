@@ -3,6 +3,7 @@
     "browser": true,
     "es2023": true
   },
+  "plugins": ["react", "unused-imports", "prettier"],
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
@@ -14,7 +15,6 @@
     "ecmaVersion": 2023,
     "sourceType": "module"
   },
-  "plugins": ["react", "unused-imports"],
   "rules": {
     "@next/next/no-img-element": "error",
     "no-undef": 0,
@@ -38,7 +38,14 @@
     "linebreak-style": ["error", "unix"],
     "unused-imports/no-unused-imports": "error",
     // Enforce consistent indentation (2 spaces)
-    "indent": ["error", 2],
+    "indent": [
+      "error",
+      2,
+      {
+        "SwitchCase": 1,
+        "ignoredNodes": ["ConditionalExpression"]
+      }
+    ],
 
     // Enforce using single quotes for strings
     "quotes": ["error", "single"],
