@@ -20,7 +20,8 @@ jobs:
           registry-url: 'https://npm.pkg.github.com'
           # Defaults to the user or organization that owns the workflow file
           scope: '@mobiuxlabs'
+      # for Yarn version 1, use `yarn publish` instead
       - run: yarn
-      - run: yarn npm publish // for Yarn version 1, use `yarn publish` instead
+      - run: yarn publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
