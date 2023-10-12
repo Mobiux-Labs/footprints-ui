@@ -1,27 +1,61 @@
-# React + TypeScript + Vite
+# mobiuxui
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The starter is built on top of Vite 4.x and prepared for writing libraries in TypeScript. It generates a hybrid package - both support for CommonJS and ESM modules.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Hybrid support - CommonJS and ESM modules
+- IIFE bundle for direct browser support without bundler
+- Typings bundle
+- ESLint - scripts linter
+- Stylelint - styles linter
+- Prettier - formatter
+- Vitest - test framework
+- Husky + lint-staged - pre-commit git hook set up for formatting
 
-## Expanding the ESLint configuration
+## GitHub Template
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+This is a template repo. Click the green [Use this template](https://github.com/kbysiec/mobiuxui/generate) button to get started.
 
-- Configure the top-level `parserOptions` property like this:
+## Clone to local
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+If you prefer to do it manually with the cleaner git history
+
+```bash
+git clone https://github.com/kbysiec/mobiuxui.git
+cd mobiuxui
+npm i
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Checklist
+
+When you use this template, update the following:
+
+- Remove `.git` directory and run `git init` to clean up the history
+- Change the name in `package.json` - it will be the name of the IIFE bundle global variable and bundle files name (`.cjs`, `.mjs`, `.iife.js`, `d.ts`)
+- Change the author name in `LICENSE`
+- Clean up the `README` and `CHANGELOG` files
+
+And, enjoy :)
+
+## Usage
+
+The starter contains the following scripts:
+
+- `dev` - starts dev server
+- `build` - generates the following bundles: CommonJS (`.cjs`) ESM (`.mjs`) and IIFE (`.iife.js`). The name of bundle is automatically taken from `package.json` name property
+- `test` - starts vitest and runs all tests
+- `test:coverage` - starts vitest and run all tests with code coverage report
+- `lint:scripts` - lint `.ts` files with eslint
+- `lint:styles` - lint `.css` and `.scss` files with stylelint
+- `format:scripts` - format `.ts`, `.html` and `.json` files with prettier
+- `format:styles` - format `.cs` and `.scss` files with stylelint
+- `format` - format all with prettier and stylelint
+- `prepare` - script for setting up husky pre-commit hook
+- `uninstall-husky` - script for removing husky from repository
+
+## Acknowledgment
+
+If you found it useful somehow, I would be grateful if you could leave a star in the project's GitHub repository.
+
+Thank you.
