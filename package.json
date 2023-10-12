@@ -1,7 +1,17 @@
 {
   "name": "mobiuxui",
-  "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
+  "description": "Mobiux UI - Tailwind CSS Components with life",
+  "author": "Mobiux Labs",
+  "homepage": "https://mobiuxui.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mobiux-Labs/mobiuxui"
+  },
+  "bugs": {
+    "url": "https://github.com/Mobiux-Labs/mobiuxui/issues"
+  },
+  "main": "src/main.tsx",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -18,6 +28,7 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@types/node": "^20.8.4",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
     "@typescript-eslint/eslint-plugin": "^6.7.5",
